@@ -1,2 +1,7 @@
 # CRUDS
-PRODUCT MANAGEMENT SYSTEM
+## PRODUCT MANAGEMENT SYSTEM
+# Create Items Data
+# Read Data
+# Update Data
+# Delete Data
+# Search On Data
