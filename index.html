@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="master.css" />
+
+    <title>CRUDS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>cruds</h1>
+        <p>product management system</p>
+      </div>
+      <div class="form">
+        <input class="f-width" type="text" id="title" placeholder="title" />
+        <div class="total_inputs">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="discount"
+          />
+          <p id="total"></p>
+        </div>
+        <input
+          class="f-width"
+          type="number"
+          name="count"
+          id="count"
+          placeholder="count"
+        />
+        <input
+          class="f-width"
+          type="text"
+          name="category"
+          id="category"
+          placeholder="category"
+        />
+        <button class="create" id="create">Create</button>
+        <input
+          class="f-width"
+          type="search"
+          id="search"
+          placeholder="search"
+          onkeyup="searchData(this.value)"
+        />
+        <div class="search-btns">
+          <button
+            class="seacrh-btn"
+            id="searchTitle"
+            onclick="getSearchMode(this.id)"
+          >
+            search by title
+          </button>
+          <button
+            class="seacrh-btn"
+            id="searchCategory"
+            onclick="getSearchMode(this.id)"
+          >
+            search by category
+          </button>
+        </div>
+        <div id="deleteAll"></div>
+      </div>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="customMSG">
+        <p class="msg">
+          ⭐ Fill up these fields 👉 <span>Title | Price | Category</span>
+        </p>
+        <p class="msg">
+          ⭐ Maximum <span>Count</span> 👉 <span class="num">100</span>
+        </p>
+        <p class="close">CLose</p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
